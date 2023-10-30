@@ -28,10 +28,12 @@ body{
     align-items: center;
     padding: 10px 0;
     height: 10vh;
+    /* flex-direction: column; */
 }
 
 .img-logo{
-    width: 150px;
+    width: 15%;
+    max-width: 150px;
     cursor: pointer;
     height: 15vh;
 }
@@ -41,10 +43,11 @@ nav button{
     background: #db0001;
     color: #fff;
     padding: 7px 20px;
-    font-size: 12px;
+    font-size: 1rem;
     border-radius: 4px;
     margin-left: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 /* .lang-btn{
     display: inline
@@ -68,7 +71,7 @@ nav button{
 .lang-btn{
     display: inline-flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.014); 
     border: 0.5px solid rgba(255, 255, 255, 0.813);
     padding: 7px 10px;
 }
@@ -88,14 +91,6 @@ nav button{
 
 }
 .main-container{
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 90vh;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    margin-top: 100px; */
     top:50%;
     width: 100%;
     height: 90vh;
@@ -104,30 +99,26 @@ nav button{
     justify-content: center;
     align-items: center;
 }
-/* .main-titles-container{
-    width: 65%;
-    color: white;
-    text-align: center;
-} */
 .main-title{
-    font-size: 60px;
+    font-size: 32px;
     margin-bottom: 14px;
-    font-family: netflix-sans;
-    line-height: 50px;
-    font-weight: 400;
-    max-width: 1500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 40px;
+    font-weight: 900;
+    max-width: 90%;
+    text-decoration: none solid rgb(255, 255, 255);
     text-align: center;
 }
 .sub-title{
     font-family: netflix-regular;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 400;
 }
 .main-call-to-action{
     padding-top: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 1.25em;
 }
 .email-signup{
     background: rgba(0, 0, 0, 0);
@@ -184,7 +175,7 @@ nav button{
     background-color: rgba(229, 9, 20, 0.753)
 }  */
 .features{
-    padding: 50px 12%;
+    padding: 5% 12%;
     font-size: 22px;
     border-top: 6px solid #333;
 }
@@ -215,7 +206,7 @@ nav button{
     font-family: netflix-sans;
 }
 .faq{
-    padding: 10px 12%;
+    padding: 5 12%;
     text-align: center;
     font-size: 18px;
     border-top: 6px solid #333;
@@ -238,14 +229,15 @@ nav button{
     display: flex;
     align-items: center;
     padding: 20px;
-    font-size: 1.17rem;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 300;
     background: #303030;
     margin-bottom: 2px;
     cursor: pointer;
     position: relative;
+    font-family: sans-serif;
 }
-label::after{
+.aaccordion li label::after{
     content: '+';
     font-size: 34px;
     position: absolute;
@@ -270,6 +262,13 @@ input[type="radio"]{
 .aaccordion input[type="radio"]:checked + label::after{
     transform: rotate(135deg);
 }
+.aaccordion label{
+    cursor: pointer;
+}
+.aaccordion label + .content{
+    max-height: 0;
+    overflow: hidden;
+}
 .faq .email-signup{
     max-width: 600px;
     margin: 20px auto 60px;
@@ -277,29 +276,76 @@ input[type="radio"]{
 .faq small{
     font-size: 13px;
 }
-.footer{
-    padding: 50px 15% 10px;
+.footer-container{
+    /* max-width: 1370px; */
+    margin: auto;
     border-top: 6px solid #333;
+    padding: 0;
+}
+.footer{
+    padding: 20px 13% 70px;
+    /* display: grid; */
     color: rgba(255,255,255,0.7);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 .footer h2{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin: 0px 0px 12px;
+    padding: 0px;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .footer col{
-    flex-basis: 25%;
+    flex-basis: 95%;
     flex-grow: 1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 25%;
+    
 }
 .footer .col a{
     display: block;
-    text-decoration: none;
     color: rgba(255,255,255,0.7);
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 0.875rem;
+    margin: 0px;
+    text-decoration: underline solid rgba(255, 255, 255, 0.7);
+    /* padding: 10px;
+    padding-right: 100px; */
+    padding: 10px 100px 10px 10px;
+    text-indent: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
 }
 .footer .row{
     align-items: flex-start;
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+footer button{
+        border: 0;
+        outline: 0;
+        background: #db0001;
+        color: #fff;
+        padding: 7px 20px;
+        font-size: 12px;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+}
+footer p{
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.875rem;
+    margin: 24px 0px 0px;
+    text-decoration: solid rgba(255, 255, 255, 0.7);
+    /* padding: 10px;
+    padding-right: 100px; */
+    padding: 0px;
+    text-indent: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }
