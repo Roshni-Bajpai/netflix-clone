@@ -1,0 +1,305 @@
+@font-face {
+    font-family: netflix-sans;
+    src: url("../fonts/NetflixSans-Bold.woff2");
+}
+@font-face {
+    font-family: netflix-regular;
+    src: url("../fonts/NetflixSans-Regular.woff2");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+    color: white;
+}
+.root{
+    background-image: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("../images/netflix1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 8%;
+    position: relative;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    height: 10vh;
+}
+
+.img-logo{
+    width: 150px;
+    cursor: pointer;
+    height: 15vh;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+/* .lang-btn{
+    display: inline
+    /* background: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.813);
+    color: #ffff;  
+    border-radius: 5px;
+    line-height: 1.25rem;
+    padding: 10px 10px;
+    font-family: netflix-sans;
+    font-size: 1rem;
+    outline: 0;
+    border-radius: 4px;
+    margin-left: 30px;
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 2.25rem;
+    padding-right: 20px;
+    width: fit-content; */
+.lang-btn{
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    border: 0.5px solid rgba(255, 255, 255, 0.813);
+    padding: 7px 10px;
+}
+.btn-sign-in{
+    background-color: #e50914;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    font-size: 0.90rem;
+    font-family: netflix-sans;
+
+}
+.main-container{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 90vh;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px; */
+    top:50%;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .main-titles-container{
+    width: 65%;
+    color: white;
+    text-align: center;
+} */
+.main-title{
+    font-size: 60px;
+    margin-bottom: 14px;
+    font-family: netflix-sans;
+    line-height: 50px;
+    font-weight: 400;
+    max-width: 1500px;
+    text-align: center;
+}
+.sub-title{
+    font-family: netflix-regular;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.main-call-to-action{
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+.email-signup{
+    background: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    margin-top: 30px;
+    border: 0.5 solid rgba(255, 255, 255, 0.813)
+    /* overflow: hidden; */
+}
+
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 15px 30px;
+    width: fit-content;
+}
+.email-holder{
+    width: 60vh;
+    height: 70%;
+    padding: 20px 10px;
+    font-size: 1em;
+    padding-right: 30px;
+    background: transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the alpha value to control the level of transparency */
+    color: white;
+    padding: 10px;
+    border: 0.5 solid rgba(255, 255, 255, 0.813)
+}
+/* .btn-get-started{
+    cursor: pointer;
+    width: fit-content;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    font-family: netflix-regular;
+    height: fit-content;
+    background-color: #e50914;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 40px;
+} */
+/* .btn-get-started:hover{
+    background-color: rgba(229, 9, 20, 0.753)
+}  */
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+    border-top: 6px solid #333;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: netflix-sans;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    border-top: 6px solid #333;
+}
+.faq h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+.aaccordion{
+    margin: 10px auto;
+    width: 100%;
+    max-width: 950px;
+}
+.aaccordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.aaccordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.17rem;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.aaccordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.aaccordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.aaccordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: rgba(255,255,255,0.7);
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
