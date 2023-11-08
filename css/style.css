@@ -1,3 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 @font-face {
     font-family: netflix-sans;
     src: url("../fonts/NetflixSans-Bold.woff2");
@@ -10,18 +15,18 @@
     margin: 0;
     padding: 0;
 }
-body{
+/* body{
     background: black;
     color: white;
-}
-.root{
+} */
+/* .root{
     background-image: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("../images/netflix1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 10px 8%;
     position: relative;
-}
+} */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -35,7 +40,7 @@ body{
     width: 15%;
     max-width: 150px;
     cursor: pointer;
-    height: 15vh;
+    height: auto;
 }
 nav button{
     border: 0;
@@ -132,17 +137,21 @@ nav button{
 }
 
 .email-signup button{
-    background: #db0001;
+    background: rgb(229,9,20);
+    position: relative;
+    border-radius: 0.25rem;
     border: 0;
     outline: 0;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.125rem;
+    font-weight: 500;
     cursor: pointer;
     padding: 15px 30px;
-    width: fit-content;
+    width: auto;
+    min-height: 3rem;
 }
 .email-holder{
-    width: 60vh;
+    width: 25vw;
     height: 70%;
     padding: 20px 10px;
     font-size: 1em;
@@ -270,7 +279,8 @@ input[type="radio"]{
     overflow: hidden;
 }
 .faq .email-signup{
-    max-width: 600px;
+    max-width: 36.625rem;
+    width: 100%;
     margin: 20px auto 60px;
 }
 .faq small{
@@ -287,7 +297,8 @@ input[type="radio"]{
     /* display: grid; */
     color: rgba(255,255,255,0.7);
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 .footer h2{
     font-size: 16px;
@@ -295,7 +306,7 @@ input[type="radio"]{
     margin: 0px 0px 12px;
     padding: 0px;
     text-align: start;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: netflix-regular;
 }
 .footer col{
     flex-basis: 95%;
@@ -311,11 +322,9 @@ input[type="radio"]{
     font-size: 0.875rem;
     margin: 0px;
     text-decoration: underline solid rgba(255, 255, 255, 0.7);
-    /* padding: 10px;
-    padding-right: 100px; */
     padding: 10px 100px 10px 10px;
     text-indent: 0px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: netflix-regular;
     font-weight: 400;
 }
 .footer .row{
